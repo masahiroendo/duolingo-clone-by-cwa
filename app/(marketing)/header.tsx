@@ -24,7 +24,7 @@ export const Header = () => {
               width={120}
               alt="mascot"
             />
-            <h1 className="text-2xl font-extrabold text-green-300 underline italic">
+            <h1 className="text-2xl font-extrabold text-green-300 tracking-wide underline italic">
               Clone
             </h1>
           </Link>
