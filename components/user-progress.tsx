@@ -25,18 +25,18 @@ export const UserProgress = ({
             src={activeCourse.imageSrc}
             alt={activeCourse.title}
             className="rounded-md border"
-            width={32}
-            height={32}
+            width={36}
+            height={36}
           />
         </Button>
       </Link>
       <Link href="/shop">
         <Button variant="ghost" className="text-orange-500">
           <Image
-            src="/duolingo-portrait.svg"
+            src="/lightning.svg"
             alt="Points"
-            width={28}
-            height={28}
+            width={16}
+            height={16}
             className="mr-2"
           />
           {points}
@@ -45,7 +45,7 @@ export const UserProgress = ({
       <Link href="/shop">
         <Button variant="ghost" className="text-rose-500">
           <Image
-            src="/duolingo-portrait.svg"
+            src="/heart.svg"
             alt="Hearts"
             width={22}
             height={22}

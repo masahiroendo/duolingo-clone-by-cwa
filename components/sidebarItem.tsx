@@ -26,8 +26,8 @@ export const SidebarItem = ({ href, iconSrc, label }: SidebarItemProps) => {
           src={iconSrc}
           alt={label}
           className="mr-5"
-          height={32}
-          width={32}
+          height={28}
+          width={28}
         />
         {label}
       </Link>

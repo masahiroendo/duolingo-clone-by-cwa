@@ -10,7 +10,7 @@ const LearnPage = () => {
         <UserProgress
           activeCourse={{
             title: "Russian",
-            imageSrc: "/duolingo-portrait.svg",
+            imageSrc: "/ru.svg",
           }}
           hearts={5}
           points={100}

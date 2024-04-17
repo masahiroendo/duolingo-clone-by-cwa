@@ -32,26 +32,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
         </Link>
       </div>
       <div className="flex flex-col gap-y-2 flex-1">
-        <SidebarItem
-          label="learn"
-          href="/learn"
-          iconSrc="/duolingo-portrait.svg"
-        />
+        <SidebarItem label="learn" href="/learn" iconSrc="/learn.svg" />
         <SidebarItem
           label="Leaderboard"
           href="/leaderboard"
-          iconSrc="/duolingo-portrait.svg"
+          iconSrc="/medal.svg"
         />
-        <SidebarItem
-          label="Quests"
-          href="/quests"
-          iconSrc="/duolingo-portrait.svg"
-        />
-        <SidebarItem
-          label="Shop"
-          href="/shop"
-          iconSrc="/duolingo-portrait.svg"
-        />
+        <SidebarItem label="Quests" href="/quests" iconSrc="/target.svg" />
+        <SidebarItem label="Shop" href="/shop" iconSrc="/shop.svg" />
       </div>
       <div className="pb-4 flex justify-end">
         <ClerkLoading>

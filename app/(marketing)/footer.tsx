@@ -7,17 +7,7 @@ export const Footer = () => {
       <div className="max-w-screen-lg mx-auto flex items-center justify-evenly h-full">
         <Button size="lg" variant="ghost" className="w-full">
           <Image
-            src="/duolingo-logo.png"
-            alt="Japanese"
-            height={32}
-            width={40}
-            className="mr-4 rounded-md"
-          />
-          Japanese
-        </Button>
-        <Button size="lg" variant="ghost" className="w-full">
-          <Image
-            src="/duolingo-logo.png"
+            src="/ru.svg"
             alt="Russian"
             height={32}
             width={40}
@@ -27,7 +17,7 @@ export const Footer = () => {
         </Button>
         <Button size="lg" variant="ghost" className="w-full">
           <Image
-            src="/duolingo-logo.png"
+            src="/cn.svg"
             alt="Chinese"
             height={32}
             width={40}
@@ -37,7 +27,27 @@ export const Footer = () => {
         </Button>
         <Button size="lg" variant="ghost" className="w-full">
           <Image
-            src="/duolingo-logo.png"
+            src="/kr.svg"
+            alt="korean"
+            height={32}
+            width={40}
+            className="mr-4 rounded-md"
+          />
+          Korean
+        </Button>
+        <Button size="lg" variant="ghost" className="w-full">
+          <Image
+            src="/jp.svg"
+            alt="Japanese"
+            height={32}
+            width={40}
+            className="mr-4 rounded-md"
+          />
+          Japanese
+        </Button>
+        <Button size="lg" variant="ghost" className="w-full">
+          <Image
+            src="/tn.svg"
             alt="Arabic"
             height={32}
             width={40}
@@ -47,7 +57,7 @@ export const Footer = () => {
         </Button>
         <Button size="lg" variant="ghost" className="w-full">
           <Image
-            src="/duolingo-logo.png"
+            src="/ir.svg"
             alt="Iranian"
             height={32}
             width={40}
