@@ -1,15 +1,34 @@
 import { redirect } from "next/navigation";
-import { getUserProgress } from "@/db/queries";
+import {
+  getChapters,
+  getCourseProgress,
+  getLessonPercentage,
+  getUserProgress,
+} from "@/db/queries";
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
 import { LearnPageHeader } from "./_components/header";
 import { UserProgress } from "@/components/user-progress";
+import { Chapter } from "./_components/chapter";
 
 const LearnPage = async () => {
   const userProgressPromise = getUserProgress();
-  const [userProgress] = await Promise.all([userProgressPromise]);
+  const chaptersPromise = getChapters();
+  const courseProgressPromise = getCourseProgress();
+  const lessonPercentagePromise = getLessonPercentage();
+  const [userProgress, chapters, courseProgress, lessonPercentage] =
+    await Promise.all([
+      userProgressPromise,
+      chaptersPromise,
+      courseProgressPromise,
+      lessonPercentagePromise,
+    ]);
 
   if (!userProgress || !userProgress.activeCourse) {
+    redirect("/courses");
+  }
+
+  if (!courseProgress) {
     redirect("/courses");
   }
 
@@ -25,6 +44,19 @@ const LearnPage = async () => {
       </StickyWrapper>
       <FeedWrapper>
         <LearnPageHeader title={userProgress.activeCourse.title} />
+        {chapters.map((chapter) => (
+          <div key={chapter.id} className="mb-10">
+            <Chapter
+              id={chapter.id}
+              order={chapter.order}
+              description={chapter.description}
+              title={chapter.title}
+              lessons={chapter.lessons}
+              activeLesson={courseProgress.activeLesson}
+              activeLessonPercentage={lessonPercentage}
+            />
+          </div>
+        ))}
       </FeedWrapper>
     </div>
   );
