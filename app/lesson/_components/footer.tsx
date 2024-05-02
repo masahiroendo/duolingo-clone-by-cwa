@@ -8,7 +8,7 @@ type FooterProps = {
   onCheck: () => void;
   status: "correct" | "none" | "wrong" | "completed";
   disabled?: boolean;
-  lessonId?: boolean;
+  lessonId?: number;
 };
 
 export const Footer = ({

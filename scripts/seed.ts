@@ -101,34 +101,138 @@ const main = async () => {
         lessonId: 1, // Nouns
         type: "SELECT",
         order: 1,
-        question: 'Which on of these is the "man"?',
+        question: "Which one of these is a woman?",
+      },
+      {
+        id: 2,
+        lessonId: 1, // Nouns
+        type: "ASSIST",
+        order: 2,
+        question: "woman",
+      },
+      {
+        id: 3,
+        lessonId: 1, // Nouns
+        type: "SELECT",
+        order: 3,
+        question: "wich one of these is an 'mental disease'?",
       },
     ]);
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 1,
-        challengeId: 1, // Which one of these is the "man"?
+        challengeId: 1, // Which one of these is the 'woman'?
+        imageSrc: "/man.svg",
+        correct: false,
+        text: "мужчина",
+        audioSrc: "/ru_man.mp3",
+      },
+      {
+        challengeId: 1, // Which one of these is the 'woman'?
+        imageSrc: "/woman.svg",
+        correct: true,
+        text: "женщины",
+        audioSrc: "/ru_woman.mp3",
+      },
+      {
+        challengeId: 1, // Which one of these is the 'woman'?
+        imageSrc: "/brigitte.svg",
+        correct: false,
+        text: "извращенец",
+        audioSrc: "/ru_freak.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 2, // "woman"?
+        correct: true,
+        text: "женщины",
+        audioSrc: "/ru_woman.mp3",
+      },
+      {
+        challengeId: 2, // "woman"?
+        correct: false,
+        text: "мужчина",
+        audioSrc: "/ru_man.mp3",
+      },
+      {
+        challengeId: 2, // "woman"?
+        correct: false,
+        text: "извращенец",
+        audioSrc: "/ru_freak.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 3, // Which one of these is an "illness"?
+        imageSrc: "/man.svg",
+        correct: false,
+        text: "мужчина",
+        audioSrc: "/ru_man.mp3",
+      },
+      {
+        challengeId: 3, // Which one of these is an "illness"?
+        imageSrc: "/brigitte-freak.webp",
+        correct: true,
+        text: "извращенец",
+        audioSrc: "/ru_freak.mp3",
+      },
+      {
+        challengeId: 3, // Which one of these is an "illness"?
+        imageSrc: "/woman.svg",
+        correct: false,
+        text: "женщины",
+        audioSrc: "/ru_woman.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challenges).values([
+      {
+        id: 4,
+        lessonId: 2, // Verbs
+        type: "SELECT",
+        order: 1,
+        question: "Which one of these is a man?",
+      },
+      {
+        id: 5,
+        lessonId: 2, // Verbs
+        type: "ASSIST",
+        order: 2,
+        question: "freak",
+      },
+      {
+        id: 6,
+        lessonId: 2, // Verbs
+        type: "SELECT",
+        order: 3,
+        question: "wich one of these is an 'illness'?",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 4, // Which one of these is the "man"?
         imageSrc: "/man.svg",
         correct: true,
         text: "мужчина",
         audioSrc: "/ru_man.mp3",
       },
       {
-        id: 2,
-        challengeId: 1, // Which one of these is the "man"?
+        challengeId: 4, // Which one of these is the "man"?
         imageSrc: "/woman.svg",
         correct: false,
         text: "женщины",
         audioSrc: "/ru_woman.mp3",
       },
       {
-        id: 3,
-        challengeId: 1, // Which one of these is the "man"?
-        imageSrc: "/robot.svg",
-        correct: false,
-        text: "робот",
-        audioSrc: "/ru_robot.mp3",
+        challengeId: 4, // Which one of these is the "man"?
+        imageSrc: "/brigitte-freak.webp",
+        correct: true,
+        text: "извращенец",
+        audioSrc: "/ru_freak.mp3",
       },
     ]);
 

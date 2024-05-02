@@ -34,7 +34,7 @@ export const UserProgress = ({
       <Link href="/shop">
         <Button variant="ghost" className="text-orange-500">
           <Image
-            src="/lightning.svg"
+            src="/points.svg"
             alt="Points"
             width={16}
             height={16}
