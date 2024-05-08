@@ -137,7 +137,7 @@ const main = async () => {
       },
       {
         challengeId: 1, // Which one of these is the 'woman'?
-        imageSrc: "/brigitte.svg",
+        imageSrc: "/freak.svg",
         correct: false,
         text: "извращенец",
         audioSrc: "/ru_freak.mp3",
@@ -175,7 +175,7 @@ const main = async () => {
       },
       {
         challengeId: 3, // Which one of these is an "illness"?
-        imageSrc: "/brigitte-freak.webp",
+        imageSrc: "/freak.webp",
         correct: true,
         text: "извращенец",
         audioSrc: "/ru_freak.mp3",
@@ -230,7 +230,7 @@ const main = async () => {
       },
       {
         challengeId: 4, // Which one of these is the "man"?
-        imageSrc: "/brigitte-freak.webp",
+        imageSrc: "/freak.webp",
         correct: true,
         text: "извращенец",
         audioSrc: "/ru_freak.mp3",
